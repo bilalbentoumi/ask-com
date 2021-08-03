@@ -119,6 +119,9 @@ return [
     'commented'                             => 'commented',
     'are_you_sure'                          => 'Are you sure?',
 
+    /* Categories */
+    'no_categories'                         => 'There is no categories',
+
     /* Questions */
     'the_questions'                         => 'Questions',
     'questions'                             => 'Questions',

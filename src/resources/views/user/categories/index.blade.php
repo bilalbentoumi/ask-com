@@ -25,7 +25,7 @@
                             </div>
                         </div>
                     @empty
-                        <h2>لا يوجد أسئلة في قسم {{ $category->name }}</h2>
+                        <h2>{{ __('lang.no_categories') }}</h2>
                     @endforelse
                 </div>
             </div>

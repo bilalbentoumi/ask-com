@@ -122,6 +122,9 @@ return [
     'commented'                             => 'علق',
     'are_you_sure'                          => 'هل أنت متأكد؟',
 
+    /* Categories */
+    'no_categories'                         => 'لا يوجد تصنيفات',
+
     /* Questions */
     'the_questions'                         => 'الأسئلة',
     'questions'                             => 'أسئلة',
