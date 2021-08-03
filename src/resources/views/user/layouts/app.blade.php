@@ -18,7 +18,7 @@
     <script src="{{ @asset('js/feather.min.js') }}"></script>
     <script src="{{ @asset('js/popper.min.js') }}"></script>
     <script src="{{ @asset('js/tippy.min.js') }}"></script>
-    <script src="{{ @asset('dataTables/jquery.dataTables.min.' . LaravelLocalization::getCurrentLocale() . '.js') }}"></script>
+    <script src="{{ @asset('datatables/jquery.dataTables.min.' . LaravelLocalization::getCurrentLocale() . '.js') }}"></script>
     <script src="{{ @asset('js/validation.' . LaravelLocalization::getCurrentLocale() . '.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     @stack('scripts')
