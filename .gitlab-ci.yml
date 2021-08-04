@@ -1,0 +1,12 @@
+image: php:7.2
+
+before_script:
+  - apt-get update -qq
+  - apt-get install -y -qq git
+
+deploy:
+  stage: deploy
+  script:
+  - apt-get install -y ruby
+  - gem install dpl
+  - dpl --provider=heroku --app=$HEROKU_APP --api-key=$HEROKU_API_KEY
