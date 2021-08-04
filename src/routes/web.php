@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Auth;
 
 Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
-    //Auth::routes();
 
     Route::get('login', [
         'as' => 'login',
