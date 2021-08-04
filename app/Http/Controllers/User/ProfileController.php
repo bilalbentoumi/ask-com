@@ -27,7 +27,8 @@ class ProfileController extends Controller {
         ]);
         $file = $request->file('picture');
 
-        $dir = 'uploads/profile/pictures/';
+
+        $dir = 'public/uploads/profile/pictures/';
         $filename = 'user'. Auth::user()->id;
         $file->move($dir, $filename);
 
@@ -45,7 +46,7 @@ class ProfileController extends Controller {
         ]);
         $file = $request->file('cover');
 
-        $dir = 'uploads/profile/covers/';
+        $dir = 'public/uploads/profile/covers/';
         $filename = 'user'. Auth::user()->id;
         $file->move($dir, $filename);
 
