@@ -4,14 +4,14 @@ services:
 
     askcom_app:
         build:
-            context: .
+            context: ./docker
             dockerfile: Dockerfile
         container_name: askcom_app
         restart: always
         ports:
             - "3001:80"
         volumes:
-            - ./src:/var/www/html
+            - .:/var/www/html
         links:
             - askcom_mysql:db
 
@@ -22,7 +22,7 @@ services:
         ports:
             - "4306:3306"
         volumes:
-            - ./data/mysql:/var/lib/mysql
+            - ./docker/data/mysql:/var/lib/mysql
         environment:
             MYSQL_USER: askcom
             MYSQL_DATABASE: askcom
