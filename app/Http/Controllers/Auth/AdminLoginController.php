@@ -23,7 +23,7 @@ class AdminLoginController extends Controller {
     public function loginAdmin(Request $request) {
 
         $rules = [
-            'email'                    => 'required|email',
+            'email'                    => 'required|string',
             'password'                 => 'required|min:8',
         ];
         $attributes = [
