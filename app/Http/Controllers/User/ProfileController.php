@@ -8,11 +8,13 @@ use App\Picture;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Kreait\Firebase\Factory;
 
 class ProfileController extends Controller {
 
     public function __construct() {
-        //$this->middleware('auth');
+        $this->factory = (new Factory)->withServiceAccount(base_path('askcom-firebase-adminsdk-of79n-7a64d994d0.json'));
+        $this->storage = $this->factory->createStorage();
     }
 
     public function index($user_id) {
@@ -23,20 +25,19 @@ class ProfileController extends Controller {
     public function uploadPicture(Request $request) {
 
         $validatedData = $request->validate([
-            'picture'               => 'required|image'
+            'picture' => 'required|image'
         ]);
+
         $file = $request->file('picture');
-
-
-        $dir = 'public/uploads/profile/pictures/';
-        $filename = 'user'. Auth::user()->id;
-        $file->move($dir, $filename);
-
         $user = Auth::user();
-        $user->picture = '/' . $dir . $filename;
-        $user->save();
 
-        return '/' . $dir . $filename;
+        if ($filename = $this->uploadImage($file, $user, 'picture')) {
+            $user->picture = $filename;
+            $user->save();
+            return $filename;
+        }
+
+        return '';
     }
 
     public function uploadCover(Request $request) {
@@ -44,17 +45,32 @@ class ProfileController extends Controller {
         $validatedData = $request->validate([
             'cover'               => 'required|image'
         ]);
+
         $file = $request->file('cover');
-
-        $dir = 'public/uploads/profile/covers/';
-        $filename = 'user'. Auth::user()->id;
-        $file->move($dir, $filename);
-
         $user = Auth::user();
-        $user->cover = '/' . $dir . $filename;
-        $user->save();
 
-        return '/' . $dir . $filename;
+        if ($filename = $this->uploadImage($file, $user, 'cover')) {
+            $user = Auth::user();
+            $user->cover = $filename;
+            $user->save();
+            return $filename;
+        }
+
+        return '';
+    }
+
+    public function uploadImage($file, $user, $type) {
+
+        $result = $this->storage->getBucket('askcom.appspot.com')->upload(
+            file_get_contents($file->getPathname()),
+            array('name' => $type . '/user_' . $user->id . '.' . $file->extension())
+        );
+
+        if ($result) {
+            return $result->info()['mediaLink'];
+        }
+
+        return '';
     }
 
 }

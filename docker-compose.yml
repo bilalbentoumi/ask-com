@@ -12,6 +12,7 @@ services:
             - "3001:80"
         volumes:
             - .:/var/www/html
+            - ./docker/php/askcom.ini:/usr/local/etc/php/conf.d/askcom.ini
         links:
             - askcom_mysql:db
 
