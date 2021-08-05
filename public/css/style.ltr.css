@@ -1,7 +1,6 @@
 body {
-    background: #f7f7f7;
     background: #eceff4;
-    font-family: 'Segoe UI';
+    font-family: 'Nunito';
 }
 
 .start {
@@ -492,13 +491,17 @@ body {
     background: #FFF;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08);
     border-radius: 2px;
-    display: inline-flex;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
     margin-bottom: 15px;
     overflow: hidden;
+    width: 100%;
 }
 .filter .item {
-    padding: 8px;
+    padding: 12px;
     font-size: 14px;
+    text-align: center;
     cursor: pointer;
 }
 .filter .item.active {
@@ -824,7 +827,7 @@ body {
     box-shadow: 0 0 10px #0001;
     padding: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 30px;
 }
 .cat-description {
