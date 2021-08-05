@@ -1,5 +1,10 @@
 FROM php:7.4-apache
 
+# Install Git
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git
+
 # Install Extensions
 RUN docker-php-ext-install pdo_mysql
 
