@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Helpers\Helper;
 use App\Helpers\Settings;
 use App\Http\Controllers\Controller;
 use App\Question;
@@ -16,7 +15,6 @@ class HomeController extends Controller {
     }
 
     public function index() {
-        //dd(Helper::notifications()[0]->type);
         return view('user.home');
     }
 
