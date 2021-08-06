@@ -1,6 +1,7 @@
 <html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
 <head>
     <title>@yield('title')</title>
+    <link rel="icon" type="image/svg" href="{{ @asset('favicon.svg') }}">
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ @asset('fonts/Swissra/Swissra.css') }}">

@@ -1,6 +1,7 @@
 <html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
 <head>
     <title>{{ __('admin.dashboard') . ' - ' . __('lang.login') }}</title>
+    <link rel="icon" type="image/svg" href="{{ @asset('favicon.svg') }}">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ @asset('fonts/Swissra/Swissra.css') }}">
