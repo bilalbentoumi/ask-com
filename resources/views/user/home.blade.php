@@ -4,14 +4,18 @@
 
 @push('js')
     <script>
-        function loadquestions(mode) {
+        function loadQuestions(mode) {
+            $('.questions').html('');
+            $('.loader').addClass('show');
             if (mode == 'newest')  {
                 $.get('{{ route('questions.newest') }}', function (data){
                     $('.questions').html(data);
+                    $('.loader').removeClass('show');
                 });
             } else if (mode == 'interested') {
                 $.get('{{ route('questions.interested') }}', function (data){
                     $('.questions').html(data);
+                    $('.loader').removeClass('show');
                 });
             }
         }
@@ -19,7 +23,7 @@
         $('.filter .item').click(function () {
             if (!$(this).hasClass('active')) {
                 $(this).addClass('active').siblings().removeClass('active');
-                loadquestions($(this).attr('data'));
+                loadQuestions($(this).attr('data'));
             }
         });
 
@@ -41,6 +45,9 @@
                             <div class="item default" data="interested">{{ __('lang.by_interests') }}</div>
                         @endif
                         <div class="item @if(!Auth::user() || Helper::interestedQuestions()->count() == 0) default @endif" data="newest">{{ __('lang.all') }}</div>
+                    </div>
+                    <div class="loader">
+                        @include('user.loader')
                     </div>
                     <div class="questions"></div>
                 </div>
