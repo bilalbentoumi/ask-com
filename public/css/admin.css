@@ -15,6 +15,7 @@ body {
 }
 
 .btn {
+    font-family: 'Nunito', 'Swissra';
     align-items: center;
 }
 .btn-primary {
@@ -24,8 +25,8 @@ body {
     text-shadow: 0 1px 1px #0003;
 }
 .btn:not(:first-child) {
-    margin-right: 0px !important;
-    margin-left: 5px !important;
+    margin-inline-end: 0px !important;
+    margin-inline-start: 5px !important;
 }
 
 .wrapper {
@@ -51,6 +52,7 @@ body {
 
 .navbar .page-title {
     font-size: 16px;
+    font-weight: 500;
 }
 
 .navbar a {
@@ -82,7 +84,7 @@ body {
     display: none;
     position: absolute;
     top: 65px;
-    right: 0px;
+    left: 0px;
     background: #FFF;
     border: solid 1px #BDBDBD;
     width: 200px;
@@ -99,7 +101,7 @@ body {
     display: block;
     content: '';
     top: -6px;
-    right: 16px;
+    left: 16px;
     width: 10px;
     height: 10px;
     background: #FFF;
@@ -169,13 +171,13 @@ body {
     align-items: start;
 }
 .logo .icon {
-    background: url('../images/icon_light.png') no-repeat;
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-position: 1px 0px;
-    width: 27px;
-    height: 27px;
-    margin-right: 5px;
+     background: url('../images/icon_light.png') no-repeat;
+     background-position-x: 0%;
+     background-position-y: 0%;
+     background-position: -26px 0px;
+     width: 27px;
+     height: 27px;
+     margin-inline-end: 5px;
 }
 .logo .text {
     display: flex;
@@ -187,7 +189,6 @@ body {
     align-items: center;
     position: relative;
     font-size: 20px;
-    font-weight: 500;
     color: #FFF;
 }
 .logo .slug {
@@ -203,6 +204,7 @@ body {
     display: block;
     padding: 30px 30px 5px;
     font-size: 12px;
+    font-weight: 500;
     color: #FFF6;
 }
 
@@ -212,7 +214,7 @@ body {
     padding: 10px 30px;
     cursor: pointer;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
     color: #FFF8;
 }
 
@@ -226,7 +228,7 @@ body {
 .sidebar ul .nav-link svg {
     width: 22px;
     height: 22px;
-    margin-right: 10px;
+    margin-inline-end: 10px;
     color: #b3c1d2;
 }
 
@@ -301,8 +303,8 @@ th, td {
 th {
     background: #f5f7fa;
     color: #7b858e;
-    text-align: left;
-    font-weight: 600;
+    text-align: right;
+    font-weight: 500;
     font-size: 14px;
     border-top: solid 1px #e3e7eb;
     border-bottom: solid 2px #e3e7eb;
@@ -311,10 +313,10 @@ th {
     cursor: pointer;
 }
 th:not(:last-child) {
-    border-right: 1px solid #0001;
+    border-left: 1px solid #0001;
 }
 td {
-    text-align: left;
+    text-align: right;
     font-weight: 500;
     font-size: 14px;
     color: #848e97;
@@ -349,19 +351,19 @@ table a {
 }
 .dataTables_paginate {
     display: inline-block;
-    float: right;
+    float: left;
 }
 .sorting {
     background: #f5f7fa url('../images/sorting.png') no-repeat;
-    background-position: right 10px top 15px;
+    background-position: left 10px top 15px;
 }
 .sorting_asc {
     background: #f5f7fa url('../images/sorting_asc.png') no-repeat;
-    background-position: right 10px top 15px;
+    background-position: left 10px top 15px;
 }
 .sorting_desc {
     background: #f5f7fa url('../images/sorting_desc.png') no-repeat;
-    background-position: right 10px top 15px;
+    background-position: left 10px top 15px;
 }
 .paginate_button {
     padding: 5px 10px;
@@ -373,7 +375,7 @@ table a {
     border-color: #FFF;
     box-shadow: 0 5px 5px #0001;
     cursor: pointer;
-    margin-right: 5px;
+    margin-inline-start: 5px;
 }
 
 .paginate_button.disabled {
@@ -389,6 +391,7 @@ table a {
 .dataTables_paginate span {
     display: inline-flex;
 }
+
 
 .action-btn {
     color: #a3afb7;
@@ -416,6 +419,7 @@ table a {
 .toolbar .title, .toolbar .ptitle {
     color: #262d37;
     font-size: 26px;
+    font-weight: 500;
     margin-bottom: 5px;
 }
 .toolbar .title {
@@ -464,9 +468,9 @@ table a {
     padding: 20px;
 }
 .field.has-error input, input.error {
-    border-color: #ff9f9f;
-    box-shadow: 0 0 10px 0 #ff000012;
-    background: #fffcfc;
+    border-color: #ff9f9f !important;
+    box-shadow: 0 0 10px 0 #ff000012 !important;
+    background: #fffcfc !important;
 }
 .help-block, .error {
     display: block;
@@ -477,7 +481,7 @@ table a {
 }
 .field-label {
     width: 150px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     margin-bottom: 5px;
     cursor: pointer;
@@ -552,7 +556,7 @@ ul.tagit li.tagit-choice {
     padding: 8px 20px !important;
 }
 ul.tagit li.tagit-choice:not(:last-child) {
-    margin-right: 5px !important;
+    margin-inline-end: 5px !important;
 }
 ul.tagit li.tagit-choice:hover {
     background: #0001 !important;
@@ -586,7 +590,7 @@ ul.tagit input[type="text"] {
     color: #76838f;
     margin: 5px 0;
     font-size: 15px;
-    padding-left: 24px;
+    padding-inline-start: 24px;
 }
 .checkbox input {
     position: absolute;
@@ -596,22 +600,22 @@ ul.tagit input[type="text"] {
 .checkbox .checkmark {
     position: absolute;
     top: 1px;
-    left: 0;
+    right: 0;
     height: 18px;
     width: 18px;
     background-color: #e6e6e6;
     border-radius: 3px;
 }
 .checkbox .checkmark::after {
-    left: 6px;
+    right: 6px;
     top: 2px;
     width: 3px;
     height: 9px;
     border: solid white;
     border-top-width: medium;
-    border-right-width: medium;
-    border-bottom-width: medium;
     border-left-width: medium;
+    border-bottom-width: medium;
+    border-right-width: medium;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -659,7 +663,7 @@ ul.tagit input[type="text"] {
     padding: 15px 25px 10px 25px;
 }
 .stats .card .title {
-    font-weight: 600;
+    font-weight: 500;
     color: #7b858e;
 }
 .stats .card .card-body {
@@ -681,7 +685,7 @@ ul.tagit input[type="text"] {
 .stats .increase svg, .stats .decrease svg {
     width: 20px;
     height: 20px;
-    margin-right: 10px;
+    margin-inline-end: 10px;
 }
 .stats .increase svg {
     color: #30d778;
@@ -701,7 +705,7 @@ ul.tagit input[type="text"] {
     content: ' ';
     width: 8px;
     height: 8px;
-    margin-right: 5px;
+    margin-inline-end: 5px;
     border-radius: 100%;
 }
 .status.active::before {
@@ -716,7 +720,7 @@ ul.tagit input[type="text"] {
     align-items: center;
 }
 .status.solved svg, .status.unsolved svg {
-    margin-right: 5px;
+    margin-inline-end: 5px;
 }
 .status.unsolved {
     color: #dedede;
@@ -743,7 +747,7 @@ ul.tagit input[type="text"] {
     padding: 10px;
 }
 .latest-users .user .user-pic {
-    margin-right: 5px;
+    margin-inline-end: 5px;
 }
 .latest-users .user .name {
     font-weight: 500;
@@ -764,13 +768,13 @@ ul.tagit input[type="text"] {
     padding: 10px;
 }
 .latest-questions .question .user-pic {
-    margin-right: 5px;
+    margin-inline-end: 5px;
 }
 .latest-questions .question .title {
     font-weight: 500;
     font-size: 13px;
     color: #596671;
-    word-wrap: anywhere;
+    word-break: break-all;
 }
 .latest-questions .question:not(:last-child) {
     border-bottom: 1px solid #EEE;
@@ -789,6 +793,7 @@ ul.tagit input[type="text"] {
 .info label {
     width: 220px;
     color: #7b858e;
+    font-weight: 500;
 }
 .info div {
     color: #262d37;
@@ -837,7 +842,7 @@ ul.tagit input[type="text"] {
     display: block;
     background: #EFF1F4;
     color: #7D858D;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     padding: 5px 10px;
     text-transform: uppercase;
@@ -861,21 +866,21 @@ ul.tagit input[type="text"] {
     height: 36px;
     border-radius: 100%;
     object-fit: cover;
-    margin-right: 5px;
+    margin-inline-end: 5px;
 }
 
 .navbar .search .cat-icon {
     width: 36px;
     height: 36px;
     border-radius: 100%;
-    margin-right: 5px;
+    margin-inline-end: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .navbar .search .user-pic, .cat-icon {
-    margin-right: 10px !important;
+    margin-inline-end: 10px !important;
 }
 
 /* Login */
@@ -982,7 +987,7 @@ ul.tagit input[type="text"] {
     padding: 16px;
     position: fixed;
     z-index: 1;
-    right: 20px;
+    left: 20px;
     bottom: 20px;
 }
 #toast.show {

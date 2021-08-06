@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ @asset('fonts/NotoNaskhArabic/NotoNaskhArabic.css') }}">
     <link rel="stylesheet" href="{{ @asset('fonts/Nunito/Nunito.css') }}">
     <link rel="stylesheet" href="{{ @asset('css/layout.css') }}">
-    <link rel="stylesheet" href="{{ @asset('css/style.' . LaravelLocalization::getCurrentLocaleDirection() . '.css') }}">
+    <link rel="stylesheet" href="{{ @asset('css/style.css') }}">
     @stack('css')
 
     <!-- SCRIPTS -->

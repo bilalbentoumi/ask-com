@@ -16,7 +16,7 @@ body {
     height: 35px;
     object-fit: cover;
     border-radius: 100%;
-    margin-left: 10px;
+    margin-inline-end: 10px;
 }
 
 /* Navbar */
@@ -53,7 +53,7 @@ body {
     height: 26px;
     background: url('../images/icon.png') no-repeat;
     background-position: -27px 0px;
-    margin-left: 5px;
+    margin-inline-end: 5px;
 }
 .navbar-header .logo .name {
     color: #03A9F4;
@@ -217,7 +217,7 @@ body {
     border: none;
     border-radius: 33em;
     padding: 6px 10px;
-    padding-right: 30px;
+    padding-inline-start: 30px;
     border: solid 1px #DBDBDB;
     width: 360px;
     transition: 0.2s;
@@ -247,7 +247,7 @@ body {
 .result a svg {
     width: 18px;
     height: 18px;
-    margin-left: 5px;
+    margin-inline-end: 5px;
     color: #66757f;
 }
 .result a:not(:last-child) {
@@ -332,7 +332,7 @@ body {
 }
 .sidebar .widget-header .widget-title svg {
     color: #0008;
-    margin-left: 8px;
+    margin-inline-end: 8px;
 }
 
 .sidebar .widget-body {
@@ -391,7 +391,7 @@ body {
     color: #0006;
 }
 .question .meta .meta-item:not(:last-child), .answer .meta .meta-item:not(:last-child) {
-    margin-left: 15px;
+    margin-inline-end: 15px;
 }
 .question .meta span a, .answer .meta span a {
     display: inline-flex;
@@ -401,10 +401,10 @@ body {
 .question .meta .meta-item svg, .answer .meta .meta-item svg {
     width: 16px;
     height: 16px;
-    margin-left: 5px;
+    margin-inline-end: 5px;
 }
 .question .meta .meta-item .count, .answer .meta .meta-item .count {
-    margin-left: 5px;
+    margin-inline-end: 5px;
 }
 
 .meta .solved {
@@ -429,7 +429,7 @@ body {
     margin-bottom: 5px;
 }
 .comment .user-pic {
-    margin-left: 5px !important;
+    margin-inline-end: 5px !important;
 }
 .comment-wrapper {
     display: flex;
@@ -478,7 +478,7 @@ body {
     color: #FFF;
     padding: 3px 10px !important;
     transition: 0.1s;
-    margin-right: 5px;
+    margin-inline-start: 5px;
 }
 .best-answer-btn:hover {
     opacity: 0.9;
@@ -525,7 +525,7 @@ body {
     width: 18px;
     height: 18px;
     color: #0006;
-    margin-left: 5px;
+    margin-inline-end: 5px;
 }
 .question-tags a {
     padding: 2px 5px;
@@ -658,7 +658,7 @@ body {
     margin-bottom: 10px;
 }
 .mobile-header .user-pic {
-    margin-left: 5px;
+    margin-inline-end: 5px;
 }
 .mobile-header .askedby {
     font-size: 12px;
@@ -748,7 +748,7 @@ body {
 }
 .page-title svg {
     color: #0008;
-    margin-left: 8px;
+    margin-inline-end: 8px;
 }
 
 /* Breadcrumb */
@@ -808,7 +808,7 @@ body {
     display: block;
     position: absolute;
     right: 100%;
-    margin-right: 15px;
+    margin-inline-start: 15px;
     top: 50%;
     margin-top: -10px;
     width: 0;
@@ -972,7 +972,7 @@ body {
     color: #76838f;
     margin: 5px 0;
     font-size: 15px;
-    padding-right: 24px;
+    padding-inline-start: 24px;
     font-family: 'NotoNaskhArabic', 'Nunito';
 }
 .checkbox input {
@@ -1262,7 +1262,7 @@ ul.tagit input[type="text"] {
     z-index: 3;
 }
 .profile-cover .profile-info {
-    padding-right: 30px;
+    padding-inline-start: 30px;
 }
 .profile-cover .profile-info .profile-link {
     color: #ffd800;
@@ -1299,7 +1299,7 @@ ul.tagit input[type="text"] {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,.4);
 }
 .profile-cover .profile-info .edit-btn svg {
-    margin-left: 3px;
+    margin-inline-end: 3px;
     width: 17px;
     height: 17px;
 }
@@ -1339,7 +1339,7 @@ ul.tagit input[type="text"] {
     background: red;
     color: #FFF;
     border-radius: 100%;
-    margin-right: 5px;
+    margin-inline-start: 5px;
 }
 .sm-item svg {
     width: 22px;
@@ -1441,7 +1441,7 @@ ul.tagit input[type="text"] {
     flex-direction: column;
     align-items: start;
     padding: 15px;
-    padding-right: 50px;
+    padding-inline-start: 50px;
 }
 #hot-questions .item:not(:last-child), #related-questions .item:not(:last-child) {
     border-bottom: 1px solid #EEE;
@@ -1472,7 +1472,7 @@ ul.tagit input[type="text"] {
 #hot-questions .item span svg, #related-questions .item span svg {
     width: 16px;
     height: 16px;
-    margin-left: 5px;
+    margin-inline-end: 5px;
 }
 
 /* Tags Widget */
@@ -1514,7 +1514,7 @@ ul.tagit input[type="text"] {
 #toast {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
+    margin-inline-end: -125px;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -1833,7 +1833,7 @@ table a {
     border-color: #FFF;
     box-shadow: 0 5px 5px #0001;
     cursor: pointer;
-    margin-right: 5px;
+    margin-inline-start: 5px;
 }
 
 .paginate_button.disabled {
@@ -1879,7 +1879,7 @@ table a {
     content: ' ';
     width: 8px;
     height: 8px;
-    margin-left: 5px;
+    margin-inline-end: 5px;
     border-radius: 100%;
 }
 .status.active::before {
@@ -1894,7 +1894,7 @@ table a {
     align-items: center;
 }
 .status.solved svg, .status.unsolved svg {
-    margin-left: 5px;
+    margin-inline-end: 5px;
 }
 .status.unsolved {
     color: #dedede;
