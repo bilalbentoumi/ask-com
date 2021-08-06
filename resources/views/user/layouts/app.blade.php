@@ -2,7 +2,7 @@
 <head>
     <title>@yield('title')</title>
     <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'/>
-
+    <link rel="icon" type="image/svg" href="{{ @asset('favicon.svg') }}">
     <!-- CSS -->
     <link rel="stylesheet" href="{{ @asset('fonts/Swissra/Swissra.css') }}">
     <link rel="stylesheet" href="{{ @asset('fonts/NotoKufiArabic/NotoKufiArabic.css') }}">
