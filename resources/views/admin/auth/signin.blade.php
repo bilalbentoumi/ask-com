@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ @asset('fonts/Swissra/Swissra.css') }}">
     <link rel="stylesheet" href="{{ @asset('fonts/Nunito/Nunito.css') }}">
     <link rel="stylesheet" href="{{ @asset('css/framework.css') }}">
-    <link rel="stylesheet" href="{{ @asset('css/admin.' . LaravelLocalization::getCurrentLocaleDirection() . '.css') }}">
+    <link rel="stylesheet" href="{{ @asset('css/admin.css') }}">
     <link rel="stylesheet" href="{{ @asset('fonts/Nunito/Nunito.css') }}">
 
     <!-- SCRIPTS -->
