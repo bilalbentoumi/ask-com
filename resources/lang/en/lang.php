@@ -18,7 +18,6 @@ return [
     'language'                              => 'Language',
     'settings'                              => 'Settings',
     'menu'                                  => 'Menu',
-    'logged_in_as_admin'                    => 'Logged in as admin',
 
     'featured_many_questions'               => 'Got lots of questions?',
     'featured_you_are_lucky'                => 'Lucky, we got lots of answers as well.',
