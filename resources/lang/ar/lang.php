@@ -21,7 +21,6 @@ return [
     'language'                              => 'اللغة',
     'settings'                              => 'إعدادات',
     'menu'                                  => 'القائمة',
-    'logged_in_as_admin'                    => 'مسجل الدخول كأدمين',
 
     'featured_many_questions'               => 'لديك العديد من الأسئلة؟',
     'featured_you_are_lucky'                => 'محظوظ, لدينا العديد من الأجوبة كذلك.',

@@ -1535,16 +1535,6 @@ ul.tagit input[type="text"] {
     background: #28D279;
 }
 
-.admin-alert {
-    position: fixed;
-    background: #000C;
-    color: #FFF;
-    border-radius: 3px;
-    padding: 10px 20px;
-    left: 10px;
-    bottom: 10px;
-}
-
 @-webkit-keyframes fadein {
     from {bottom: 0; opacity: 0;}
     to {bottom: 30px; opacity: 1;}
