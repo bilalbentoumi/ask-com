@@ -9,4 +9,4 @@ deploy:
   script:
   - apt-get install -y ruby
   - gem install dpl
-  - dpl --provider=heroku --app=$HEROKU_APP --api-key=$HEROKU_API_KEY
+  - dpl --provider=heroku --app=$HEROKU_APP --api-key=$HEROKU_API_KEY --skip-cleanup
