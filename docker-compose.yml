@@ -1,0 +1,30 @@
+version: "3.0"
+
+services:
+
+    askcom_app:
+        build: ./docker
+        container_name: askcom_app
+        restart: always
+        ports:
+            - "4000:80"
+        volumes:
+            - .:/var/www/html
+            - ./docker/php/askcom.ini:/usr/local/etc/php/conf.d/askcom.ini
+        links:
+            - askcom_mysql:db
+
+    askcom_mysql:
+        image: mysql:5.7.30
+        platform: linux/x86_64
+        container_name: askcom_mysql
+        restart: always
+        ports:
+            - "4001:3306"
+        volumes:
+            - ./docker/data/mysql:/var/lib/mysql
+        environment:
+            MYSQL_USER: askcom
+            MYSQL_DATABASE: askcom
+            MYSQL_PASSWORD: askcom
+            MYSQL_ROOT_PASSWORD: askcom
