@@ -1,5 +1,6 @@
 <html dir="{{ LaravelLocalization::getCurrentLocaleDirection() }}">
 <head>
+
     <title>@yield('title')</title>
     <link rel="icon" type="image/svg" href="{{ @asset('favicon.svg') }}">
 
@@ -22,6 +23,12 @@
     <script src="{{ @asset('js/validation.' . LaravelLocalization::getCurrentLocale() . '.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
     @stack('scripts')
+
+    @vite('resources/css/app.css')
+
+    @wireUiScripts
+    <script src="//unpkg.com/alpinejs" defer></script>
+
 </head>
 <body>
 <div class="wrapper">
