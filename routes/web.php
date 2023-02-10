@@ -10,7 +10,7 @@ use App\Http\Controllers\Auth\ {
 
 use App\Http\Controllers\Admin\ {
     AdminsController,
-    AnswersController,
+    AnswersController as AdminAnswersController,
     CategoriesController as AdminCategoriesController,
     HomeController as AdminHomeController,
     QuestionsController as AdminQuestionsController,
@@ -20,6 +20,7 @@ use App\Http\Controllers\Admin\ {
 };
 
 use App\Http\Controllers\User\ {
+    AnswersController,
     CategoriesController,
     CommentsController,
     HomeController,
