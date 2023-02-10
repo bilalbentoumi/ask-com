@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="{{ @asset('fonts/NotoKufiArabic/NotoKufiArabic.css') }}">
     <link rel="stylesheet" href="{{ @asset('fonts/NotoNaskhArabic/NotoNaskhArabic.css') }}">
     <link rel="stylesheet" href="{{ @asset('fonts/Nunito/Nunito.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ @asset('css/layout.css') }}">
     <link rel="stylesheet" href="{{ @asset('css/style.css') }}">
     @stack('css')
